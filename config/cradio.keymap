@@ -65,7 +65,6 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-         &kp GRAVE  &kp AT    &kp UNDER  &kp MINUS  &kp BSLH     
     
         left_layer {
             bindings = <
