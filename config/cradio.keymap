@@ -45,7 +45,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &lt 2 BSPC &ht RSHFT ENTER &ht LA(LSHIFT(LCTRL(LMETA))) SPACE &lt 1 TAB
+                                          &lt 2 BSPC &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
