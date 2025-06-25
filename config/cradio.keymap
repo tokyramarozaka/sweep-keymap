@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
@@ -53,14 +53,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │  HOME    │ PAGE UP  │ PAGE DN  │ END      │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp HOME  &kp PG_UP  &kp PG_DN    &kp END
+        //│ TAB      │  1       │  2       │  3       │          │   │ INSERT   │  HOME    │ LG(LEFT) │ LG(RIGHT)│ END      │
+            &kp TAB    &kp N1     &kp N2     &kp N3     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  |       │  \       │  `       │  \       │          │   │ INSERT   │ LEFT     │ DOWN     │ UP       │  RIGHT   │
-            &kp PIPE  &kp BSLH  &kp GRAVE  &kp UNDER    &kp TILDE      &kp INS    &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+        //│  |       │  _       │  `       │  \       │ ~        │   │OPT(BSPC) │ LEFT     │ DOWN     │ UP       │  RIGHT   │
+            &kp PIPE  &kp UNDER  &kp GRAVE  &kp BSLH    &kp TILDE    &kp LA(BSPC) &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  6       │  7       │  8       │  9       │  0       │   │          │ DELETE   │  PAGE DN │  PAGE UP │          │
-            &kp TILDE  &trans     &trans     &trans     &trans          &trans    &kp DEL   &kp PG_DN  &kp PG_UP   &trans
+        //│  6       │  7       │  8       │  9       │  0       │   │OPT(DEL)  │ DELETE   │  PAGE DN │  PAGE UP │          │
+            &kp TILDE  &trans     &trans     &trans     &trans        &kp LA(DEL)    &kp DEL   &kp PG_DN  &kp PG_UP   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -87,14 +87,14 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│ F1       │ F2       │ F3       │ F4       │PROFILE 0 │   │          │          │          │          │          │
+           &kp F1      &kp F2     &kp F3     &kp F4     &kp F5          &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│ F11      │ F12      │ MUTE     │VOLUME_DN │ VOLUME_UP│   │          │          │          │          │BOOTLOADER│
+           &kp F11    &kp F12   &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│BOOTLOADER│          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │  RESET   │
+           &bootloader &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans    &sys_reset
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
