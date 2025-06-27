@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <210>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
@@ -45,7 +45,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &lt 2 TAB &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
+                                          &lt 2 BSPC &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -53,7 +53,7 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │  1       │  2       │  3       │          │   │ INSERT   │  HOME    │ LG(LEFT) │ LG(RIGHT)│ END      │
+        //│ TAB      │  1       │  2       │  3       │          │   │ INSERT   │  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
             &kp TAB    &kp N1     &kp N2     &kp N3     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  |       │  _       │  `       │  \       │ ~        │   │OPT(BSPC) │ LEFT     │ DOWN     │ UP       │  RIGHT   │
