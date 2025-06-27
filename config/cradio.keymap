@@ -54,7 +54,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ TAB      │  1       │  2       │  3       │          │   │ INSERT   │  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
-            &kp TAB    &kp N1     &kp N2     &kp N3     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
+            &kp TAB    &kp N1   &kp LS(LC(TAB)) &kp LC(TAB)     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  |       │  _       │  `       │  \       │ ~        │   │OPT(BSPC) │ LEFT     │ DOWN     │ UP       │  RIGHT   │
             &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp ENTER    &kp LA(BSPC) &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
