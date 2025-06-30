@@ -62,11 +62,12 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &mo 2  &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
+                                            &mo 2  &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &mo 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
+    
+    
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -74,7 +75,7 @@
             &kp TAB    &kp N1   &kp LS(LC(TAB)) &kp LC(TAB)     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  |       │  _       │  `       │  \       │ ~        │   │OPT(BSPC) │ LEFT     │ DOWN     │ UP       │  RIGHT   │
-            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp ENTER    &kp LA(BSPC) &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp BSPC    &kp LA(BSPC) &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  6       │  7       │  8       │  9       │  0       │   │OPT(DEL)  │ DELETE   │  PAGE DN │  PAGE UP │          │
             &kp TILDE  &trans     &trans     &trans     &trans        &kp LA(DEL)    &kp DEL   &kp PG_DN  &kp PG_UP   &trans
