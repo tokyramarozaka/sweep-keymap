@@ -21,12 +21,12 @@
         combo_tab {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp TAB>;
+            bindings = <&kp GRAVE>;
         };
         combo_enter {
             timeout-ms = <50>;
-            key-positions = <6 7 8>;
-            bindings = <&kp ENTER>;
+            key-positions = <8 9>;
+            bindings = <&kp BSLH>;
         };
     };
     behaviors {
@@ -71,14 +71,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │  1       │  2       │  3       │          │   │ INSERT   │  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
-            &kp TAB    &kp N1   &kp LS(LC(TAB)) &kp LC(TAB)     &trans        &kp INS   &kp HOME  &kp LG(LEFT) &kp LG(RIGHT) &kp END
+        //│ TAB      │  1       │  2       │  3       │          │   │ OPT(BSPC)│  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
+            &kp TAB  &kp LS(TAB) &kp LS(LC(TAB)) &kp LC(TAB) &trans   &kp LA(BSPC) &kp HOME  &kp LA(LEFT) &kp LA(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  |       │  _       │  `       │  \       │ ~        │   │OPT(BSPC) │ LEFT     │ DOWN     │ UP       │  RIGHT   │
-            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp BSPC    &kp LA(BSPC) &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+        //│  |       │  _       │  `       │  \       │ ~        │   │  BSPC    │ LEFT     │ DOWN     │ UP       │  RIGHT   │
+            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp BSPC       &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  6       │  7       │  8       │  9       │  0       │   │OPT(DEL)  │ DELETE   │  PAGE DN │  PAGE UP │          │
-            &kp TILDE  &trans     &trans     &trans     &trans        &kp LA(DEL)    &kp DEL   &kp PG_DN  &kp PG_UP   &trans
+        //│  6       │  7       │  8       │  9       │  0       │   │ OPT(DEL) │ DELETE   │  PAGE DN │  PAGE UP │  INSERT  │
+            &kp TILDE  &trans     &trans     &trans     &trans        &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
