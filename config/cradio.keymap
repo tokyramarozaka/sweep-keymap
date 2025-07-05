@@ -18,15 +18,30 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_tab {
+        combo_grave {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp GRAVE>;
         };
-        combo_enter {
+        combo_tidle {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&kp TILDE>;
+        };
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp PIPE>;
+        };
+        combo_backslash {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp PIPE>;
+        };
+        combo_under {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp UNDER>;
         };
     };
     behaviors {
@@ -42,7 +57,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
@@ -83,10 +98,10 @@
             &kp TAB  &kp LS(TAB) &kp LS(LC(TAB)) &kp LC(TAB) &trans   &kp LA(BSPC) &kp HOME  &kp LA(LEFT) &kp LA(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  |       │  _       │  `       │  \       │ ~        │   │  BSPC    │ LEFT     │ DOWN     │ UP       │  RIGHT   │
-            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH    &kp BSPC       &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH   &kp LG(LEFT)       &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  6       │  7       │  8       │  9       │  0       │   │ OPT(DEL) │ DELETE   │  PAGE DN │  PAGE UP │  INSERT  │
-            &kp TILDE  &trans     &trans     &trans     &trans        &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
+            &kp LG(Q)  &kp LG(X) &kp LG(C)  &kp LG(V) &kp LG(RIGHT)        &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
