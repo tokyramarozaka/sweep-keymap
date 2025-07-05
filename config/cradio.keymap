@@ -25,11 +25,13 @@
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+        sht: short_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
             tapping-term-ms = <100>;
-            bindings = <&mo 2>, <&kp ENTER>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -55,7 +57,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &td0 &lt RSHFT BSPC &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
+                                            &mo 2 &sht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
