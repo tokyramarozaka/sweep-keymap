@@ -16,6 +16,19 @@
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RALT k3  &ht RCTRL k4
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp GRAVE>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp TILDE>;
+        };
+    };
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
