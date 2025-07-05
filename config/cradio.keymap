@@ -25,6 +25,12 @@
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&mo 2>, <&kp ENTER>;
+        };
     };
 
     conditional_layers {
@@ -49,7 +55,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &mo 2  &ht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
+                                            &td0 & RSHFT BSPC &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -84,7 +90,7 @@
         //│  6       │          │          │  _       │          │   │  /       │  +       │  "       │  [       │  ]       │
             &kp N6    &kp N7     &kp N8     &kp N9     &kp N0          &kp SQT  &kp PLUS  &kp UNDER   &kp LBKT   &kp RBKT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
