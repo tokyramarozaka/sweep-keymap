@@ -38,10 +38,15 @@
             key-positions = <28 29>;
             bindings = <&kp BSLH>;
         };
-        combo_under {
+        combo_underscore {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&kp UNDER>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <31 33>;
+            bindings = <&kp ESC>;
         };
     };
     behaviors {
@@ -60,6 +65,14 @@
             tapping-term-ms = <120>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
+        };
+        slt: short_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -85,7 +98,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &mo 2 &sht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &lt 1 BSPC
+                                           &slt 2 TAB &sht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &slt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
