@@ -36,7 +36,7 @@
         combo_backslash {
             timeout-ms = <50>;
             key-positions = <28 29>;
-            bindings = <&kp PIPE>;
+            bindings = <&kp BSLH>;
         };
         combo_under {
             timeout-ms = <50>;
@@ -94,14 +94,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ TAB      │  1       │  2       │  3       │          │   │ OPT(BSPC)│  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
-            &kp TAB  &kp LS(TAB) &kp LS(LC(TAB)) &kp LC(TAB) &trans   &kp LA(BSPC) &kp HOME  &kp LA(LEFT) &kp LA(RIGHT) &kp END
+        //│ TAB      │SHIFT(TAB)│S(C(TAB)) │ CTRL(TAB)│          │   │ OPT(BSPC)│  HOME    │ LA(LEFT) │ LA(RIGHT)│ END      │
+            &kp TAB &kp LS(TAB) &kp LS(LC(TAB)) &kp LC(TAB) &trans   &kp LA(BSPC) &kp HOME  &kp LA(LEFT) &kp LA(RIGHT) &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  |       │  _       │  `       │  \       │ ~        │   │  BSPC    │ LEFT     │ DOWN     │ UP       │  RIGHT   │
-            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH   &kp LG(LEFT)       &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
+        //│  |       │  _       │  `       │  \       │CMD(LEFT) │   │  BSPC    │ LEFT     │ DOWN     │ UP       │  RIGHT   │
+            &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH   &kp LG(LEFT)    &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  6       │  7       │  8       │  9       │  0       │   │ OPT(DEL) │ DELETE   │  PAGE DN │  PAGE UP │  INSERT  │
-            &kp LG(Q)  &kp LG(X) &kp LG(C)  &kp LG(V) &kp LG(RIGHT)        &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
+        //│ CMD(Q)   │  CUT     │  COPY    │  PASTE   │CMD(RIGHT)│   │ OPT(DEL) │ DELETE   │  PAGE DN │  PAGE UP │  INSERT  │
+            &kp LG(Q)  &kp LG(X) &kp LG(C)  &kp LG(V) &kp LG(RIGHT)    &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -148,7 +148,7 @@
         //│ F1       │ F2       │ F3       │ F4       │PROFILE 0 │   │          │          │          │          │          │
            &kp F1      &kp F2     &kp F3     &kp F4     &kp F5      &kp F6 &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ F11      │ F12      │ R_CLICK  │  L_CLICK │ VOLUME_UP│   │          │          │          │          │BOOTLOADER│
+        //│ F11      │ F12      │ L_CLICK  │  R_CLICK │ VOLUME_UP│   │          │          │          │          │BOOTLOADER│
            &kp F11    &kp F12   &mkp LCLK  &mkp RCLK &kp K_VOL_UP  &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │  RESET   │
