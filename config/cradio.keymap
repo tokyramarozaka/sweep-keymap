@@ -16,6 +16,20 @@
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RALT k3  &ht RCTRL k4
 
 / {
+    macros {
+        js_arrow: javascript_arrow_macro {
+            compatible = "zmk,behavior-macro";
+            label = "JS_ARROW";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+        };
+        java_arrow: java_arrow_macro {
+            compatible = "zmk,behavior-macro";
+            label = "JAVA_ARROW";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_grave {
@@ -70,7 +84,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <80>;
             quick-tap-ms = <0>;
             bindings = <&mo>, <&kp>;
         };
@@ -98,7 +112,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &slt 2 TAB &sht RSHFT ENTER &ht LS(LC(LA(LGUI))) SPACE &slt 1 BSPC
+                                    &slt 2 TAB &sht LS(LC(LA(LGUI))) ENTER &sht RSHFT SPACE &slt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -114,13 +128,13 @@
             &kp PIPE  &kp TILDE  &kp GRAVE  &kp BSLH   &kp LG(LEFT)    &kp BSPC &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CMD(Q)   │  CUT     │  COPY    │  PASTE   │CMD(RIGHT)│   │ OPT(DEL) │ DELETE   │  PAGE DN │  PAGE UP │  INSERT  │
-            &kp LG(Q)  &kp LG(X) &kp LG(C)  &kp LG(V) &kp LG(RIGHT)    &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
+            &kp LG(Q)  &kp LG(X) &js_arrow  &java_arrow &kp LG(RIGHT)    &kp LA(DEL) &kp DEL   &kp PG_DN   &kp PG_UP &kp INS 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-    
+
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
