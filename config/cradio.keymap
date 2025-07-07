@@ -21,13 +21,13 @@
             compatible = "zmk,behavior-macro";
             label = "JS_ARROW";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT>;
+            bindings = <&kp EQUAL &kp LS(V)>;
         };
         java_arrow: java_arrow_macro {
             compatible = "zmk,behavior-macro";
             label = "JAVA_ARROW";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
+            bindings = <&kp MINUS &kp LS(V)>;
         };
     };
     combos {
