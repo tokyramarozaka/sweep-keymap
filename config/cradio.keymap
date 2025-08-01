@@ -14,7 +14,6 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2  &ht LGUI k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RALT k3  &ht RCTRL k4
-
 / {
     macros {
         js_arrow: javascript_arrow_macro {
@@ -112,7 +111,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &slt 2 TAB &sht RSHFT ENTER &sht LS(LC(LA(LGUI)))SPACE &slt 1 BSPC
+                                        &mo 2  &sht RSHFT ENTER &sht LS(LC(LA(LGUI)))SPACE &slt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
