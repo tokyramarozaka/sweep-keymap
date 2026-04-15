@@ -9,7 +9,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: stable
+      revision: main
       import: app/west.yml
   self:
     path: config
