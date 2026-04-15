@@ -9,7 +9,6 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: 9442f6d  # last stable before Zephyr 3.5+ board changes
       import: app/west.yml
   self:
     path: config
